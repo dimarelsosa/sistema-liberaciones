@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/recuperarContraseña.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="recuperarCuenta">
+        <h1 style="color: black;">¿Olvidaste tu contraseña?</h1>
+        <p>Ingresa tu correo electronico y te enviaremos un enlace</p>
+        <p>de recuperación.</p>
+
+        <label for="">Correo electronico</label> 
+        <input type="text" name="" id="correoRecuperar" placeholder="Ingresa tu correo con el que te registraste"> <br>
+        <button class="btnContinuar" onclick="recuperarCuenta()">Continuar</button> <br> <br> <br>
+        <div id="notificacionRecuperar"></div>
+        <a style="color: yellow;" href="../index.php">Volver al inicio de sesión</a>
+
+    </div>
+
+    <script src="../js/notificaciones.js"></script>
+    <script src="../js/login/recuperarCuenta.js"></script>
+</body>
+</html>

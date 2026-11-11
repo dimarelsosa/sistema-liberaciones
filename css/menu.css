@@ -1,0 +1,550 @@
+body{
+    margin: 0;
+    background-color: #ffffff;
+     overflow-x: hidden;
+}
+
+/* BARRA PRINCIPAL */
+
+.barra{
+    display: flex;
+    align-items: center;
+    padding: 15px 5px;
+    background: linear-gradient(135deg,#031d44, #025b8b );
+}
+
+/*funcion activar color al dar click en boton*/
+.botones button.activo{
+    background-color: #04e2fb;
+}
+
+/*boton de inicio Home*/
+.inicio{
+    background-color: rgb(5, 5, 5);
+    padding: 4px 10px;
+    border: none;
+}
+.inicio:hover{
+    background-color: gray;
+}
+
+/*<---- IZQUIERDA */
+.lado-izquierdo{
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+  
+}
+
+.verSaldo,
+.btnComprarSaldo,
+.btnPedidos,
+.btnConfiguracion,
+.btnSalir{
+    margin-bottom: 0;
+}
+
+/* BOTONES IZQUIERDA */
+.verSaldo{
+    padding: 10px 20px;
+    background-color: white;
+    color: #060028;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+.btnComprarSaldo{
+    padding: 10px 20px;
+   background-color:  rgb(0, 95, 0);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+
+.btnComprarSaldo:hover{
+    background-color:  rgb(1, 74, 1);
+       
+}
+
+.nota a {
+  color: #00A8E0;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+
+
+/* CENTRO */
+.botones{
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* BOTONES CENTRO */
+.botones button{
+    background-color: white;
+    padding: 8px 25px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.botones button:hover{
+     background-color: rgb(151, 151, 151);
+    color: white;
+    transform: scale(1.05);
+    border: rgb(0, 0, 0);
+}
+
+
+
+.btnTelcel img{
+    width: 80px;
+    height: auto;
+
+}
+
+.btnAtit img{
+    width: 80px;
+    height: auto;
+}
+
+
+.btnUnefon img{
+    width: 80px;
+    height: auto;
+}
+
+.btnMovistar img{
+    width: 80px;
+    height: auto;
+}
+
+
+
+/* DERECHA ----->*/
+.lado-derecho{
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+
+
+.btnPedidos{
+  background-color: rgb(0, 0, 0);
+  color: rgb(246, 255, 0);
+  border: 3px solid transparent;  /*tipo de linea, invisible*/
+  animation: borde 2s linear infinite; /*tiempo, velocidad constante y nunca se de*/
+  cursor: progress;
+}
+
+
+/*   0%
+    *******
+75% *     * 25%
+    *******
+      50%
+*/
+@keyframes borde{
+  0%   { border-top-color: rgb(1, 179, 37); }
+
+  25%  { border-top-color: transparent; border-right-color: rgb(1, 179, 37); }
+
+  50%  { border-right-color: transparent; border-bottom-color: rgb(1, 179, 37); }
+
+  75%  { border-bottom-color: transparent; border-left-color: rgb(1, 179, 37); }
+
+  100% { border-left-color: transparent; border-top-color: rgb(1, 179, 37); }
+}
+
+/* BOTONES DERECHA */
+.btnConfiguracion{
+    background-color: rgb(138, 138, 138);
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    
+}
+
+.btnConfiguracion:hover{
+    background-color: rgb(103, 103, 103);
+}
+
+.btnSalir{
+    background-color: rgb(185, 36, 3);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 20px;
+    cursor: pointer;
+  
+}
+
+.btnSalir:hover{
+    background-color: rgb(103, 3, 3); 
+}
+
+
+
+                                        /*DISEÑO DE INTERFAZ DE SOLICITUD DE LIBERACION  TELCEL*/
+.tituloTelcel{
+    margin: 30px 2px;
+    font-size: 30px;
+    color: #020a36;
+    align-self: flex-start;
+    
+}
+
+
+.avisoTelcel{
+margin: 0px;
+}
+
+
+.bandera{
+margin-left: 5px;
+font-size: 14px;
+
+}
+
+.contenedorOpciones{
+display: flex;
+gap: 170px;
+margin-top: 80px;
+justify-content: center;
+flex-wrap: wrap;
+}
+.card{
+  background: linear-gradient(135deg,#031d44, #025b8b );
+  box-shadow:0px 3px 10px  rgb(88, 88, 88);
+  color: white;
+}
+.card h4{
+    color: yellow;
+}
+.card button{
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: #ff9501;
+    border: none;
+    border-radius: 10px;
+    box-shadow:0px 3px 10px  rgb(247, 176, 101);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
+
+.card button:hover{
+    background-color: rgb(193, 124, 6);
+}
+
+
+.formVentana{
+    display: none;
+}
+
+
+/* Fondo oscuro (overlay) */
+.formVentana{
+    position: fixed; /* se queda fija en pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* importante: inicia oculta */
+    justify-content: center; /* centra horizontal */
+    align-items: center;     /* centra vertical */
+
+    z-index: 999; /* encima de todo */
+}
+
+.contenidoVentana{
+  background: linear-gradient(135deg,#031d44, #025b8b );
+  color: white;
+  padding: 25px;
+  width: 300px;
+  text-align: center; 
+  box-shadow: 0px 5px 10px  rgba(2, 117, 155, 0.527);
+  position: relative;
+
+}
+
+.cerrarVentana{
+    background-color: #6f0000;
+    color: white;
+    border: none;
+    position: absolute;
+    
+    right: 0px;
+    top: 0px;
+
+}
+
+.cerrarVentana:hover{
+  background-color: gray;
+  border: none;
+}
+
+.formDeposito{
+    display: none;
+}
+
+/*ventana de cuenta a depositar*/
+.formDeposito{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.contenidoDeposito{
+    background-color: #031d44;
+    width: 400px;
+    color: white;
+    position: absolute;
+    
+}
+
+.btncerrarDeposito{
+    background-color: #6f0000;
+    color: white;
+    position: absolute;
+    right: 0px;
+    top: 0x;
+    cursor: pointer;
+}
+.btncerrarDeposito:hover{
+     background-color: gray;
+}
+
+
+#imeiLiberacion{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#imeiLiberacion:hover{
+    background-color: rgb(177, 175, 175);
+}
+
+
+.btnConfirmarPedido{
+    margin-top: 15px;
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+}
+.btnConfirmarPedido:hover{
+    background-color: rgb(109, 71, 0);
+}
+
+/*tabla pedidos*/
+.tablaPedidos{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.tablaPedidos th{
+    background: #111827;
+    color: white;
+    padding: 12px;
+}
+
+.tablaPedidos td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 600px){
+    .barra{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .lado-izquierdo,
+    .lado-derecho{
+        justify-content: center;
+    }
+
+    .botones{
+        justify-content: center;
+    }
+}
+
+
+
+.mensaje{
+    margin: 5px 0px;
+    font-size: 20px;
+}
+.nota{
+    margin: 5px 0px;
+}
+
+ /*Boton Whats*/
+.btn-whatsapp{
+    position: fixed;
+    display: flex;
+    background-color: #0a702f;
+    color: white;
+    border-radius: 25px;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px ;
+    text-decoration: none;
+    box-shadow:0px 3px 10px  rgb(0, 0, 0);
+    gap: 10px;
+     
+}
+.btn-whatsapp:hover{
+     background-color: #035922;
+}
+
+.btn-whatsapp i{
+    font-size: 20px;
+}
+
+
+.formPedidos {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;   /* 🔥 clave real */
+}
+.tablaPedidos {
+    width: 100%;
+    min-width: 800px;   /* controla cuándo aparece scroll */
+    border-collapse: collapse;
+    background: white;
+}
+
+.number{
+    color: rgb(255, 255, 255);
+}
+
+.cerrarAjust{
+ 
+    background-color: #6f0000;
+    color: white;
+    border: none;
+    position: absolute;
+    
+    right: 0px;
+    top: 0px;
+}
+
+.cerrarAjust:hover{
+    background-color: gray;
+}
+
+
+
+.formAjustes{
+    display: none;
+}
+.formAjustes{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    
+}
+             
+.cuadroAjustes{
+    background-color: #031d44;
+    width: 400px;
+    height: 600px;
+    color: white;
+    position: relative;
+    border-radius: 15px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* Avatar */
+.avatarPerfil{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #025b8b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    margin: 20px auto 10px auto;
+
+    border: 3px solid white;
+}
+
+.cuadroAjustes h2{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Campos */
+.campoPerfil{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.campoPerfil label{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.campoPerfil input{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.campoPerfil input[readonly]{
+    background-color: #707070;
+    color: #555;
+}
+
+.btnGuardarPerfil{
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #00A8E0;
+    color: white;
+    border: none; 
+
+    
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnGuardarPerfil:hover{
+    background-color: #02526d;
+}

@@ -1,0 +1,269 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.rectangulo{
+    background-color: black;
+    width: 100%;
+    min-height: 78px;
+    display: flex;  /*Normalmente los botones se pondrían uno debajo del otro.Pero con display: flex; se acomodan en fila: 1 2 3 4*/
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.btnSaldo{
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: auto;
+    
+}
+
+.botones button{
+    background-color: rgb(0, 133, 93);
+    width: 150px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.botones button:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+.btnSalir{
+    background-color: red;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: auto;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.btnSalir:hover{
+    background-color: rgb(109, 3, 3);
+}
+
+.botones button.prendido{
+    background-color: gray;
+}
+
+.tablaClientes{
+    width: 100%;
+    border-collapse: collapse;
+   
+}
+
+.tablaClientes th{
+    background-color: rgb(0, 0, 47);
+    color: white;
+    padding: 14px;
+}
+
+.tablaClientes td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+
+}
+
+.tablaPedidos{
+   width: 100%;
+   border-collapse: collapse;
+   
+}
+.tablaPedidos th{
+    background-color: rgb(2, 10, 84);
+    color: rgb(255, 255, 255);
+    padding: 14px;
+}
+
+
+.tablaPedidos td{
+    text-align: center;
+    padding: 10px;
+    border-bottom:1px solid #000000;
+    
+}
+
+.aguilaHome{
+
+    display:block;
+    margin:auto;
+
+    width:100%;
+    max-width:350px;
+
+    animation: flotar 3s ease-in-out infinite;
+
+    
+}
+@keyframes flotar{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+.modalSaldo{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+/*DE RECJAZADO EXITO Y AGREGAR SALDO*/
+.modalContenido{
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.modalContenido input{
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    
+}
+
+.botonesModal{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*FONDO DE EXITO VERDE, CODIGO RECHAZADO ROJO Y PENDIENTE*/
+
+.pedido-verde td {
+    background-color: rgba(4, 129, 129, 0.932) !important; /* Un verde translúcido */
+    color: #ffffff !important;
+}
+
+.pedido-rojo td {
+    background-color: rgba(110, 28, 3, 0.932) !important; /* Un rojo oscuro translúcido */
+    color: #ffffff !important;
+}
+
+.pedido-pendiente td, .pedido-amarillo td {
+    background-color: rgba(63, 171, 225, 0.914) !important; /* Un ámbar suave que no lastima */
+    color: #ffffff !important;
+}
+/*TABLA EDITAR CLIENTES*/
+.tablaEditar{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tablaEditar th{
+    background-color: aqua;
+    padding: 20px;
+}
+
+.tablaEditar td{
+    background-color: white;
+    border-bottom:1px solid #000000;
+}
+
+.buscar{
+    background-color: rgb(7, 1, 44);
+    padding: 20px;
+    width: 200px;
+    height: 17px;
+    border-bottom: none;
+    border-radius: 20px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    .rectangulo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* 🔥 TODOS LOS BLOQUES MISMO ANCHO Y CENTRADOS */
+    .btnSaldo,
+    .btnSalir,
+    .botones {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto !important;
+        box-sizing: border-box;
+    }
+
+    /* 🔥 CENTRAR TEXTO INTERNO */
+    .btnSaldo,
+    .btnSalir,
+    .botones button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 45px;
+    }
+
+    /* 🔥 BOTONES DEL GRUPO */
+    .botones {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+
+    /* TABLAS RESPONSIVAS */
+    .tablaClientes,
+    .tablaEditar {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+ .formPedidos {
+    width: 100%;
+    background: black;
+    overflow-x: auto;
+}
+
+.tablaPedidos {
+    width: 100%;
+    min-width: 600px; /* o el mínimo que necesites */
+    border-collapse: collapse;
+}
+* {
+    box-sizing: border-box;
+}
+
+
+    .modalContenido {
+        width: 90%;
+    }
+
+    .aguilaHome {
+        max-width: 250px;
+    }
+      
+}

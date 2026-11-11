@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.recuperarCuenta{
+    color: white;
+     background: linear-gradient(135deg,#039682, #0a85c8 );
+  display: flex;
+  width: 90%;
+  max-width: 360px;
+  min-height: 360px;
+  flex-direction: column;
+  
+}
+
+.btnContinuar{
+    display: block;
+    margin: auto;
+    background-color: #0a85c8;
+    width: 120px;
+    height: 30px;
+    justify-content: center;
+    border-radius: 20px;
+    color: white;
+}
+
+.btnContinuar:hover{
+    background-color: gray;
+}
