@@ -22,7 +22,7 @@ $compania = $_POST["compania"];
 $costo    = $_POST["costo"];
 
 
-// 🔥 CONSULTAR SALDO ACTUAL
+//CONSULTAR SALDO ACTUAL
 $sqlSaldo = "SELECT saldo FROM usuarios WHERE id = '$id_usuario'";
 $resultadoSaldo = $conexion->query($sqlSaldo);
 
@@ -31,7 +31,7 @@ $usuario = $resultadoSaldo->fetch_assoc();
 $saldoActual = $usuario["saldo"];
 
 
-// 🔥 VALIDAR SI TIENE SALDO SUFICIENTE
+//VALIDAR SI TIENE SALDO SUFICIENTE
 if($saldoActual < $costo){
 
     echo "saldo_insuficiente";
@@ -39,7 +39,7 @@ if($saldoActual < $costo){
 }
 
 
-// 🔥 DESCONTAR SALDO
+//DESCONTAR SALDO
 $nuevoSaldo = $saldoActual - $costo;
 
 $sqlDescontar = "UPDATE usuarios 

@@ -11,7 +11,7 @@ $id_usuario = $_POST["id_usuario"];
 $costo = $_POST["costo"];
 
 
-// VERIFICAR SI YA FUE REEMBOLSADO (Corregido 'id' en lugar de 'id_pedido')
+// VERIFICAR SI YA FUE REEMBOLSADO 
 $sqlVerificar = "SELECT reembolsado FROM pedidos WHERE id = '$id_pedido'";
 
 $resultadoVerificar = $conn->query($sqlVerificar);
@@ -34,7 +34,7 @@ WHERE id = '$id_usuario'
 $conn->query($sqlSaldo);
 
 
-// ACTUALIZAR PEDIDO (Corregido estado='cancelado' y WHERE id='$id_pedido')
+// ACTUALIZAR PEDIDO 
 $sqlPedido = "
 UPDATE pedidos 
 SET 

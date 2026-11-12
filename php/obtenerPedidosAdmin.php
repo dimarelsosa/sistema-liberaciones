@@ -31,7 +31,7 @@ if($_SESSION['rol'] != 'admin'){
     exit();
 }
 
-// 📌 CORREGIDO: Agregamos 'id AS id_pedido' para que coincida con el JavaScript
+
 $sql = "SELECT 
             pedidos.id AS id_pedido, 
             pedidos.id_usuario, 

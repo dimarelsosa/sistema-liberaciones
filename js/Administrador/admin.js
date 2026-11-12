@@ -40,8 +40,7 @@ let pedidoActualCodigo = null;
         }
 
 
-        //formPedidos
-        
+  
 
 
 
@@ -110,7 +109,7 @@ cargarClientes();
 
 
 
-//ver pedidos de los clientes
+
 //ver pedidos de los clientes
 async function cargarPedidos(){
 
@@ -468,7 +467,7 @@ async function cargarClientesEditar() {
 cargarClientesEditar();
 
 
-// FUNCION EDITAR
+
 // FUNCION EDITAR CLIENTE
 function editarCliente(idCliente){
 
@@ -627,7 +626,7 @@ function eliminarCliente(idCliente){
 }
 
 
-//buscar clientes
+
 // BUSCADOR DE CLIENTES
 document.getElementById("buscadorEditar").addEventListener("keyup", function(){
 

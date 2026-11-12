@@ -152,7 +152,7 @@ $conexion->close();
 
         </tbody>
       </table>
-      <!-- BOTÓN EN TU TABLA (OPCIONES) -->
+      
 
 
 <!-- MODAL -->
@@ -187,7 +187,7 @@ $conexion->close();
   </div>
 </div>
 
-<!--notificacion de que -->
+<!--notificacion -->
 <div id="notificacionYaFueReembolsado"></div>
      
      <script src="../js/notificaciones.js"></script>

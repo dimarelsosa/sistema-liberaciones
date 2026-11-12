@@ -22,7 +22,7 @@ if(!isset($_SESSION['usuario_id'])){
     exit();
 }
 
-// 🔥 CONSULTA CON JOIN PARA TRAER NOMBRE Y CORREO DE TODOS LOS USUARIOS
+//CONSULTAMOS CON JOIN PARA TRAER NOMBRE Y CORREO DE TODOS LOS USUARIOS
 $sql = "SELECT 
             pedidos.id AS id_pedido, 
             usuarios.nombre AS nombre_usuario, 

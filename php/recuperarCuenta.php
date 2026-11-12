@@ -49,7 +49,7 @@ if($resultado->num_rows > 0){
 $link =
 "http://localhost/liberaciones/php/nuevaPassword.php?token=$token";
 
-   // echo $link;
+   
 
 
     $mail = new PHPMailer(true);

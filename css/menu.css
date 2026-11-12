@@ -425,7 +425,7 @@ flex-wrap: wrap;
 .formPedidos {
     width: 100%;
     max-width: 100%;
-    overflow-x: auto;   /* 🔥 clave real */
+    overflow-x: auto;   /*  clave real */
 }
 .tablaPedidos {
     width: 100%;

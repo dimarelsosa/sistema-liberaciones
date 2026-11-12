@@ -13,10 +13,10 @@ $telefono  = $_POST['numero'];
 $correo    = $_POST['correo'];
 $password  = $_POST['password'];
 
-// 🔐 Encriptar contraseña
+// Encriptar contraseña
 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
-// 🔍 Verificar si el correo ya existe
+// Verificar si el correo ya existe
 $stmt = $conexion->prepare("SELECT id FROM usuarios WHERE correo = ?");
 $stmt->bind_param("s", $correo);
 $stmt->execute();
@@ -27,7 +27,7 @@ if ($resultado->num_rows > 0) {
     exit();
 }
 
-// 📝 Insertar usuario
+// Insertar usuario
 $stmt = $conexion->prepare("INSERT INTO usuarios (nombre, apellidos, telefono, correo, password) VALUES (?, ?, ?, ?, ?)");
 $stmt->bind_param("sssss", $nombre, $apellidos, $telefono, $correo, $passwordHash);
 

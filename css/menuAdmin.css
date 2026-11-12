@@ -129,7 +129,7 @@ body{
     align-items: center;
 }
 
-/*DE RECJAZADO EXITO Y AGREGAR SALDO*/
+/*DE RECHAZADO EXITO Y AGREGAR SALDO*/
 .modalContenido{
     background: rgb(0, 0, 0);
     padding: 20px;
@@ -204,7 +204,7 @@ body{
         padding: 10px;
     }
 
-    /* 🔥 TODOS LOS BLOQUES MISMO ANCHO Y CENTRADOS */
+    /*  TODOS LOS BLOQUES MISMO ANCHO Y CENTRADOS */
     .btnSaldo,
     .btnSalir,
     .botones {
@@ -214,7 +214,7 @@ body{
         box-sizing: border-box;
     }
 
-    /* 🔥 CENTRAR TEXTO INTERNO */
+    /*  CENTRAR TEXTO INTERNO */
     .btnSaldo,
     .btnSalir,
     .botones button {
@@ -226,7 +226,7 @@ body{
         height: 45px;
     }
 
-    /* 🔥 BOTONES DEL GRUPO */
+    /*  BOTONES DEL GRUPO */
     .botones {
         display: flex;
         flex-direction: column;
